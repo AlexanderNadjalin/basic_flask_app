@@ -40,4 +40,4 @@ app.db
 basic_flask_app.log*
 
 # .idea
-.idea
+idea

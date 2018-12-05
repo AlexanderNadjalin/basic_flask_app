@@ -5,7 +5,9 @@ import logging
 from logging.handlers import RotatingFileHandler
 import os
 from config import Config
+from app import routes, models, errors
 
+# setup of basics
 app = Flask(__name__)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
@@ -24,4 +26,4 @@ if not app.debug:
     app.logger.setLevel(logging.INFO)
     app.logger.info('Basic Flask App startup')
 
-from app import routes, models, errors
+
